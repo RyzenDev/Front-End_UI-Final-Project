@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body {
     background: #dfe9f5;
@@ -13,11 +12,13 @@ body {
     align-items: center;
 }
 .header {
+    display: flex;
     width: 100%;
     top: 0;
     height: 80px;
     position: relative;
     background: blue;
+    justify-content: space-between;
 }
 .header h2 {
     font-size: 40px;
@@ -26,6 +27,35 @@ body {
     text-align: left;
     text-indent: 50px;
     margin-top: 15px;
+}
+.user-btn {
+    position: relative;
+    display: inline-block;
+    margin: 22.5px 50px 20px 20px;
+}
+.user-btn .fas {
+    font-size: 30px;
+}
+.user-content {
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.user-btn:hover .user-content{
+    display: block;
+}
+.user-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.user-content a:hover {
+    background-color: #ddd;
 }
 .sidebar-container {
     height: 100%;
@@ -46,9 +76,6 @@ body {
     letter-spacing: 3px;
     background: linear-gradient(30deg,#df0155,#ed4901);
 }
-
-
-
 .import-btn {
     display: block;
     width: 145px;
@@ -151,26 +178,118 @@ span {
     width: 100%;
     border-collapse: collapse;
 }
+.table-header {
+    background-color: #707677;
+}
 .title {
     font-weight: bolder;
     font-size: 30px;
-}
-.table-container th {
-    background-color: #f2f2f2;
-    border: 1px solid black;
-    padding: 8px;
-    position: relative;
+    margin-left: 10px;
 }
 .table-container .table-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.table-container thead th {
+    border: 1px solid black;
+}
 .search-bar {
     margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .search-bar input {
     width: 200px;
     padding: 5px;
     border: 1px solid black;
+}
+.table-section {
+    height: 650px;
+    overflow: auto;
+}
+.table-section table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+.table-section thead th {
+    position: sticky;
+    top: 0;
+    border: 1px solid black;
+    background-color: #BAFF39;
+}
+.table-section tbody td {
+    border: 1px solid black;
+    text-align: center;
+}
+.icon-btn-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.delete-btn .rename-btn .file-info-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+.delete-btn:hover {
+    background-color: red;
+    color: white;
+}
+.rename-btn:hover {
+    background-color: green;
+    color: white;
+}
+.file-info-btn:hover {
+    background-color: black;
+    color: white;
+}
+.icon-btn-column li {
+    list-style: none;
+    margin: 5px 5px;
+}
+.icon-btn-column .fas {
+    font-size: medium;
+}
+
+
+
+
+.icon-btn {
+    position: relative;
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+}
+.icon-btn .fas {
+    font-size: 20px;
+}
+.icon-ctn {
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.icon-btn:hover .icon-ctn {
+    display: block;
+}
+.icon-ctn a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.icon-ctn a:hover {
+    background-color: #ddd;
 }
