@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="UI.css">
+    <title>DocTrack.com</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h2>DocTracker</h2></div>
+    </div>
+    <input type="checkbox" name="" id="check">
+    <div class="sidebar-container">
+      <label for="check">
+        <span class="fas fa-times" id="times"></span>
+        <span class="fas fa-bars" id="bars"></span>
+      </label>
+      <div class="head">Menu</div>
+          <div class="import">
+          <button type="button" class="import-btn">Import</button>
+        </div>
+          <div class="split-btn">
+          <button type="button" class="export-btn" onclick="toggleExportOptions()">Export</button>
+          <div id="exportOptions" class="dropdown">
+            <button onclick="exportToPDF()">PDF</button>
+            <button onclick="exportToWord()">Word</button>
+          </div>
+        </div>
+    </div>
+    <div class="table-container">
+      <table id="table">
+        <thead>
+          <tr>
+            <th colspan="9">
+              <div class="table-header">
+                <div class="title">Document</div>
+                <div class="search-bar">
+                  <input type="text" placeholder="Search">
+                </div>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>File Name</th>
+            <th>Created By</th>
+            <th>Last Modified By</th>
+            <th>Created Date</th>
+            <th>Last Modified Date</th>
+            <th>Tags</th>
+            <th>Version Number</th>
+            <th>Version Notes</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+</body>
+
+<script>
+  function toggleExportOptions() {
+    var exportOptions = document.getElementById('exportOptions');
+    if (exportOptions.style.display === 'block') {
+      exportOptions.style.display = 'none';
+    } else {
+      exportOptions.style.display = 'block'
+    }
+  }
+</script>
+
+</html>
+
