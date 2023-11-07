@@ -27,6 +27,24 @@
             </div>
         </div>
     </div>
+    <input type="checkbox" name="" id="check">
+    <div class="sidebar-container">
+      <label for="check">
+        <span class="fas fa-times" id="times"></span>
+        <span class="fas fa-bars" id="bars"></span>
+      </label>
+      <div class="head">Menu</div>
+          <div class="import">
+          <button type="button" class="import-btn">Import</button>
+        </div>
+          <div class="split-btn">
+          <button type="button" class="export-btn" onclick="toggleExportOptions()">Export</button>
+          <div id="exportOptions" class="dropdown">
+            <button onclick="exportToPDF()">PDF</button>
+            <button onclick="exportToWord()">Word</button>
+          </div>
+        </div>
+    </div>
     <div class="grid-container">
         <main class="main-content">
           <div class="container"><h2>Total Documents</h2></div>
