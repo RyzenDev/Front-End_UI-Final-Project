@@ -337,11 +337,11 @@ span {
   .ellipsis-ctn a:hover {
     background-color: #f1f1f1;
   }
-  .btn:hover .ellipsis-ctn {
+  .ellipsis:focus + .ellipsis-ctn {
     display: block;
   }
   .ellipsis {
     background-color: transparent;
-    cursor: pointer;
     border: none;
+    cursor: pointer;
   }
