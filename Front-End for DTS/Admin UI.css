@@ -70,6 +70,10 @@ body {
 .admin-content a:hover {
     background-color: #ddd;
 }
+.main-container {
+  border: 2px solid black;
+  margin-left: 45px;
+}
 .sidebar-container {
   height: 100%;
   width: 200px;
@@ -236,6 +240,7 @@ span {
     font-weight: bolder;
     font-size: 30px;
     margin-left: 10px;
+    color: #BAFF39;
   }
   .table-container .table-header {
     display: flex;
