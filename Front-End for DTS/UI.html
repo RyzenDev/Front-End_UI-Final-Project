@@ -61,7 +61,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th style="width: 300px;">File Name</th>
+                                <th style="width: 300px;">File Name
+                                <button onclick="toggleFilter()" id="filterButton"><i class="fa fa-caret-down filter-icon"></i></button>
+                            </th>
                                 <th style="width: 150px;">Tags</th>
                                 <th style="max-width: 75px;">Created By</th>
                                 <th style="max-width: 75px;">Last Modified By</th>
@@ -371,6 +373,17 @@
       exportOptions.style.display = 'none';
     } else {
       exportOptions.style.display = 'block'
+    }
+  }
+
+  var filterButton = document.getElementById('filterButton');
+  var filterIcon = document.querySelector('.filter-icon');
+
+  function toggleFilter() {
+    if (filterIcon.classList.contains('up')) {
+        filterIcon.classList.remove('up');
+    } else {
+        filterIcon.classList.add('up');
     }
   }
 </script>
