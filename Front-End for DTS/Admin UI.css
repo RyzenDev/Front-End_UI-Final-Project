@@ -254,12 +254,19 @@ span {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .search-bar input {
+  .search-input {
     width: 300px;
     padding: 5px;
     border: 2px solid black;
     margin-right: 20px;
+    outline: #000;
   }
+.search-icon {
+    position: absolute;
+    right: 145px;
+    top: 235px;
+    transform: translateY(235px);
+}
   .clear-data-button {
     height: 28px;
     padding: 5px;
@@ -303,8 +310,8 @@ span {
     height: 40px;
     z-index: 1;
   }
-  tr:hover {
-    background-color: white;
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
   }
   .table-scroll button {
     background-color: transparent;

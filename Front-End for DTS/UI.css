@@ -82,15 +82,32 @@ body {
     transition: 0.5s ease;
     transform: translateX(-200px);
 }
-.sidebar-container .head {
-    color: black;
+.sidebar-container .head {  
+    background: rgba(186, 255, 57, 0.8);
+}
+.sidebar-container h1 {
+    background: linear-gradient(90deg, #104f55, #32746d, 
+    #9ec5ab, #01200f, #011502);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: animate 10s linear infinite;
     font-size: 30px;
     font-weight: bolder;
     padding: 30px;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
-    background: rgba(186, 255, 57, 0.8);
+}
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
 }
 .import-btn {
     display: block;
@@ -223,11 +240,20 @@ span {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.search-bar input {
+.search-input {
     width: 300px;
     padding: 5px;
     border: 2px solid black;
+    outline: #000;
 }
+.search-icon {
+    position: absolute;
+    right: 35px;
+    top: 55px;
+    transform: translateY(55px);
+}
+
+
 .table-scroll {
     max-height: 800px;
     overflow-y: auto;
@@ -257,8 +283,8 @@ span {
     height: 40px;
     z-index: 1;
   }
- tr:hover {
-    background-color: white;
+ tr:nth-child(even) {
+    background-color: #f2f2f2;
  }
  .table-scroll button {
     background-color: transparent;
